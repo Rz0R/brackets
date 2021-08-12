@@ -19,7 +19,7 @@ function check(str, bracketsConfig) {
       }
     } else if (OPEN_BRACKETS.includes(ch) && ch !== BRACKETS_PAIR[ch]) {
       stack.push(ch);
-    } else if (!OPEN_BRACKETS.includes(ch) && ch !== BRACKETS_PAIR[ch]) {
+    } else {
       if (!stack.length) {
         return false;
       }
